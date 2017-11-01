@@ -1,0 +1,21 @@
+{
+    "id": "{{id}}",
+    "name": "{{company.companyName}}",
+    "slogan": "{{company.bs}}",
+    "description": "{{lorem.lines}}",
+    "created": "{{date.past}}",
+    "address1": "{{address.streetAddress}}",
+    "address2": "{{address.city}}, {{address.state}} {{address.zipCode}}",
+    "keyProductIds": [
+        "{{foreign_id(product)}}",
+        "{{foreign_id(product)}}",
+        "{{foreign_id(product)}}"
+    ],
+    "tags": [
+        "{{commerce.productAdjective}}",
+        "{{commerce.productAdjective}}",
+        "{{commerce.productAdjective}}"
+    ],
+    "headerImage": "{{image.business}}",
+    "website": "{{internet.url}}"
+}

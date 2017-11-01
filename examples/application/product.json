@@ -1,0 +1,10 @@
+{
+    "_meta": {
+        "count": 100
+    },
+    "id": "{{id}}",
+    "name": "{{commerce.productName}}",
+    "cost": "{{commerce.price}}",
+    "launchDate": "{{date.past}}",
+    "companyId": "{{foreign_id(company)}}"
+}

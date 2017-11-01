@@ -1,0 +1,14 @@
+{
+    "_meta": {
+        "count": 20
+    },
+    "name": "{{system.commonFileName}}",
+    "userId": "{{foreign_id(user)}}",
+    "productId": "{{foreign_id(product)}}",
+    "size": "{{random.number}}",
+    "public": "{{random.boolean}}",
+    "updateHistory": {
+        "lastUpdate": "{{date.past}}",
+        "created": "{{date.past}}"
+    }
+}

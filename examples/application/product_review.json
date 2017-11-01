@@ -1,0 +1,10 @@
+{
+    "_meta": {
+        "count": 200
+    },
+    "id": "{{id}}",
+    "productId": "{{foreign_id(product)}}",
+    "userId": "{{foreign_id(user)}}",
+    "title": "{{lorem.sentence}}",
+    "review": "{{lorem.paragraphs}}"
+}

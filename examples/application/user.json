@@ -1,0 +1,16 @@
+{
+    "id": "{{id}}",
+    "username": "{{internet.userName}}",
+    "password": "{{internet.password}}",
+    "nameColor": "{{internet.color}}",
+    "userAgent": "{{internet.userAgent}}",
+    "bio": "{{lorem.text}}",
+    "signature": "{{hacker.phrase}}",
+    "name": "{{name.firstName}} {{name.lastName}}",
+    "role": "{{name.title}}",
+    "locale": "{{random.locale}}",
+    "profilePicture": "{{random.image}}",
+    "website": "{{internet.url}}",
+    "joinDate": "{{date.past}}",
+    "companyId": "{{foreign_id(company)}}"
+}

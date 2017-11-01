@@ -1,0 +1,7 @@
+{
+    "id": "{{id}}",
+    "name": "{{name.firstName}} {{name.lastName}}",
+    "address": "{{address.streetAddress}} {{address.streetName}}, {{address.city}}, {{address.stateAbbr}}",
+    "employer": "{{company.companyName}}",
+    "created": "{{date.past}}"
+}
