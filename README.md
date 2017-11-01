@@ -299,7 +299,7 @@ This software is released under the MIT license, detailed in the LICENSE file. N
 as [swagger-ui](https://github.com/swagger-api/swagger-ui), [faker.js](https://github.com/Marak/faker.js), 
 and [json-server](https://github.com/typicode/json-server) may use separate licenses, such as the Apache license.
 
-# Crap I have to fix
+# Junk I have to fix
 
 - TODO: website for this setup? Maybe just github sites, or a thing on cpp.net
 - TODO: More examples?
