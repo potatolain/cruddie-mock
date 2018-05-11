@@ -18,7 +18,7 @@ Usage: cruddie-mock [options] [directory path]
 
 [directory path] should be a directory with json files describing your models. If
 omitted, the current working directory will be used instead. Regular require-style
-javascript (.js) files will also work - just set your model as exports.
+javascript (.js) files will also work - export your model.
 ```
 
 ## Options
