@@ -1,6 +1,6 @@
 {
   "name": "cruddie-mock",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Node module for quickly spinning up CRUD APIs with mock data based on json model schemas.",
   "main": "./src/api.js",
   "scripts": {
