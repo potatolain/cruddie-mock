@@ -260,19 +260,7 @@ A plain json file will also work. For some live examples, check the `examples` f
 
 If you define multiple models, the `foreign_id` field will let you link them together, similar to a join in 
 mysql. cruddie-mock will look at the other model you reference, and pick a random id to link it to.
-
-## Meta information
-
-Models can have a special `_meta` field, which can customize settings about how cruddie-mock handles the model.
-
-Right now, the only option available is `count`, which will change the number of results generated, instead of
-using the default. There is an example in [the uploads model](./examples/application/uploads.json) in the 
-[applications example](./examples/application).
-
-# Node API
-
-The module doesn't have a nodejs API, at least not yet. This is a planned feature, but I have no estimate for when 
-it might be implemented. Here's what it looks like, with an excerpt from `upload.json` in the `application` example:
+Here's what it looks like, with an excerpt from `upload.json` in the `application` example:
 
 ```json
 {
@@ -284,6 +272,19 @@ it might be implemented. Here's what it looks like, with an excerpt from `upload
 As long as you have a user model, this will find a valid user id to put into this field. This by itself is kinda
 useful, but you can also use the API to fetch all uploads owned by a user, or fetch the user object with your 
 upload. Run the `application` demo and look at the swagger documentation to see how.
+
+## Meta information
+
+Models can have a special `_meta` field, which can customize settings about how cruddie-mock handles the model.
+
+Right now, the only option available is `count`, which will change the number of results generated, instead of
+using the default. There is an example in [the uploads model](./examples/application/uploads.json) in the 
+[applications example](./examples/application).
+
+# Node API?
+
+The module doesn't have a nodejs API, at least not yet. This is a planned feature, but I have no estimate for when 
+it might be implemented. 
 
 # Contributing
 
