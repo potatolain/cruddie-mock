@@ -292,6 +292,19 @@ The short answer is, send a PR! There are plenty of guides online to help you do
 you're new to it. I don't have any hard-and-fast rules - just please try to write tests if you 
 are adding complex logic. I'm sure we can figure out a way to get your changes in.
 
+# Publishing new versions
+
+This is mainly a note for myself, and any other contributors that might come along. Publishing is 
+currently a manual process. Run the following commands, filling in details as needed.
+
+```sh
+npm version [patch|minor|major] -m "This is what we did"
+git push && git push --tags
+npm publish
+```
+
+After this, please fill out the release notes on github. (Yes, manually. Sorry!)
+
 # A few words on testing...
 
 This is the first personal project I've ever put effort into writing tests for. They probably are not super great, 
