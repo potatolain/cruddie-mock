@@ -35,8 +35,12 @@ jobs:
         
       # run tests!
       - run: npm test
+
+      - store_artifacts: 
+          path: ~/repo/coverage
+          destination: coverage
       
-      # Is it time to publish? This step sure thinks so...
+  # Is it time to publish? This step sure thinks so...
   deploy:
     <<: *defaults
     steps: 
