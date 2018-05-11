@@ -17,7 +17,8 @@ with CRUD methods for mock data. Cruddie Mock was built with simplicity in mind,
 Usage: cruddie-mock [options] [directory path]
 
 [directory path] should be a directory with json files describing your models. If
-omitted, the current working directory will be used instead.
+omitted, the current working directory will be used instead. Regular require-style
+javascript (.js) files will also work - just set your model as exports.
 ```
 
 ## Options
@@ -255,6 +256,11 @@ A plain json file will also work. For some live examples, check the `examples` f
 | `{{system.fileExt}}` | csml | fileExt object. |
 | `{{system.semver}}` | 9.5.3 | semver object. |
 
+## Linking models together
+
+If you define multiple models, the `foreign_id` field will let you link them together, similar to a join in 
+mysql. cruddie-mock will look at the other model you reference, and pick a random id to link it to.
+
 ## Meta information
 
 Models can have a special `_meta` field, which can customize settings about how cruddie-mock handles the model.
@@ -266,7 +272,18 @@ using the default. There is an example in [the uploads model](./examples/applica
 # Node API
 
 The module doesn't have a nodejs API, at least not yet. This is a planned feature, but I have no estimate for when 
-it might be implemented.
+it might be implemented. Here's what it looks like, with an excerpt from `upload.json` in the `application` example:
+
+```json
+{
+  "name": "{{system.fileName}}",
+  "userId": "{{foreign_id(user)}}"
+}
+```
+
+As long as you have a user model, this will find a valid user id to put into this field. This by itself is kinda
+useful, but you can also use the API to fetch all uploads owned by a user, or fetch the user object with your 
+upload. Run the `application` demo and look at the swagger documentation to see how.
 
 # Contributing
 
@@ -282,7 +299,7 @@ but my hope is that they will give contributors some confidence in their changes
 That said, I am *not* a firm believer in 100% test coverage, nor in complicating code to write better unit tests.
 
 Don't let tests hold you up from submitting a PR! Whether you feel like some are missing, or you have tests failing
-for no reason - just note it in the PR and we'll get things working. The test may need to be rewritten, or scrapped
+for no reason - just note it in the PR and we'll get things working. My tests may need to be rewritten, or scrapped
 completely.
 
 # Modules we use and love
@@ -298,10 +315,3 @@ completely.
 This software is released under the MIT license, detailed in the LICENSE file. Note that included modules such
 as [swagger-ui](https://github.com/swagger-api/swagger-ui), [faker.js](https://github.com/Marak/faker.js), 
 and [json-server](https://github.com/typicode/json-server) may use separate licenses, such as the Apache license.
-
-# Junk I have to fix
-
-- TODO: website for this setup? Maybe just github sites, or a thing on cpp.net
-- TODO: More examples?
-
-

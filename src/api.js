@@ -65,7 +65,7 @@ function postTransformModels(modelData) {
 /**
  * Given a filename, a directory and some options, respond with an object mapped to arrays of objects with all 
  * fields parsed.
- * Note that this does NOT perform post-transforms. (Tthey need all models parsed first.)
+ * Note that this does NOT perform post-transforms. (They need all models parsed first.)
  * @param {string} file The name of the file to parse and generate model data for.
  * @param {string} directory The full path to the directory that the file is in.
  * @param {object} options A set of options that can tell us how many results to create, etc.
@@ -76,6 +76,7 @@ function parseFile(file, directory, options) {
     if (file === 'package.json' && fs.existsSync(path.join(directory, 'node_modules'))) {
         console.warn('WARNING: Looks like you ran cruddie-mock in the root of a node project. Pass in a directory name as the first argument to use that directory. This notification means we parsed your package.json file, so the API is serving up "package" objects based on your package.json file.');
     }
+    
     if (file.endsWith('.json') || file.endsWith('.js')) {
         var model,
             count = options.defaultResultCount;
