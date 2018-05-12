@@ -300,7 +300,6 @@ currently a manual process. Run the following commands, filling in details as ne
 ```sh
 npm version [patch|minor|major] -m "This is what we did"
 git push && git push --tags
-npm publish
 ```
 
 After this, please fill out the release notes on github. (Yes, manually. Sorry!)
