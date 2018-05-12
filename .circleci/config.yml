@@ -40,6 +40,9 @@ jobs:
           path: ~/repo/coverage
           destination: coverage
           
+      - store_test_results:
+          path: ~/repo/coverage
+
       - persist_to_workspace:
           root: ~/repo
           paths: .
