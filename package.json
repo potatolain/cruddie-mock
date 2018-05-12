@@ -4,7 +4,7 @@
   "description": "Node module for quickly spinning up CRUD APIs with mock data based on json model schemas.",
   "main": "./src/api.js",
   "scripts": {
-    "test": "node_modules/.bin/istanbul cover node_modules/jasmine/bin/jasmine.js --include-all-sources -x **/*_spec.js -x bin/**/* -x public/**/* -x scripts/**/*",
+    "test": "node_modules/.bin/istanbul cover node_modules/jasmine/bin/jasmine.js",
     "print_faker_docs": "node ./scripts/generate_docs.js"
   },
   "bin": {
