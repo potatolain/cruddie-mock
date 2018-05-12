@@ -3,6 +3,8 @@
 Dead simple API mocking tool. Supply a folder full of json files describing your models, get a working REST API 
 with CRUD methods for mock data. Cruddie Mock was built with simplicity in mind, so it should set you up for success.
 
+For an example server, [check out the live demo](http://cruddie-mock-demo.cpprograms.net/)
+
 # Quickstart Guide
 
   1. Install cruddie-mock globally: `npm install -g cruddie-mock`
