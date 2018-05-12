@@ -61,7 +61,7 @@ jobs:
           name: Publish to dockerhub
           command: |
             docker build -t cppchriscpp/cruddie-mock:$CIRCLE_TAG .
-            docker login -u $DOCKER_USRE -p $DOCKER_PASS
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push cppchriscpp/cruddie-mock:$CIRCLE_TAG
 
 
