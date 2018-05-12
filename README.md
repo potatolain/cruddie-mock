@@ -3,7 +3,8 @@
 Dead simple API mocking tool. Supply a folder full of json files describing your models, get a working REST API 
 with CRUD methods for mock data. Cruddie Mock was built with simplicity in mind, so it should set you up for success.
 
-For an example server, [check out the live demo](http://cruddie-mock-demo.cpprograms.net/)
+For an example server, [check out the live demo](http://cruddie-mock-demo.cpprograms.net/). This is powered by the
+[application example](https://github.com/cppchriscpp/cruddie-mock/tree/master/examples/application).
 
 # Quickstart Guide
 
