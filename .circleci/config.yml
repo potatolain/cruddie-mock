@@ -39,6 +39,11 @@ jobs:
       - store_artifacts: 
           path: ~/repo/coverage
           destination: coverage
+          
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
       
   # Is it time to publish? This step sure thinks so...
   deploy:
