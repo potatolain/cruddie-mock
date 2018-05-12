@@ -55,8 +55,14 @@ jobs:
           name: Authenticate with repo
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
       - run:
-          name: Publish package
+          name: Publish package to npm
           command: npm publish
+      - run: 
+          name: Publish to dockerhub
+          command: |
+            docker build -t cppchriscpp/cruddie-mock:$CIRCLE_TAG .
+            docker login -u $DOCKER_USRE -p $DOCKER_PASS
+            docker push cppchriscpp/cruddie-mock:$CIRCLE_TAG
 
 
 workflows:
