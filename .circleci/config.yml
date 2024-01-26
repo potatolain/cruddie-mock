@@ -6,9 +6,11 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker: 
-    - image: cimg/node:6
+    - image: circleci/node:6
 jobs:
   test:
+    <<: *defaults
+      
     steps:
       - checkout
 
