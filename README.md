@@ -8,7 +8,7 @@ the zip file from github, then extract it somewhere. Then, open a command line w
 ```bash
 cruddie-mock ./examples/application
 ```
-The json supporting this is in the [application example folder](https://github.com/cppchriscpp/cruddie-mock/tree/master/examples/application).
+The json supporting this is in the [application example folder](https://gh.nes.science/cruddie-mock/tree/master/examples/application).
 
 # Quickstart Guide
 

@@ -55,7 +55,7 @@ if (args.h || args.help) {
     console.info();
     console.info('All options are also supported as environment variables, using SNAKE_CASE');
     console.info('Find more complete documentation on Github!');
-    console.info('https://github.com/cppchriscpp/cruddie-mock');
+    console.info('https://gh.nes.science/cruddie-mock');
     process.exit();
 }
 

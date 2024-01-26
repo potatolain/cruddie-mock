@@ -10,10 +10,6 @@
   "bin": {
     "cruddie-mock": "bin/cruddie-mock.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cppchriscpp/cruddie-mock"
-  },
   "preferGlobal": true,
   "keywords": [
     "rest",
@@ -25,7 +21,6 @@
     "simple",
     "swagger"
   ],
-  "author": "cppchriscpp",
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.4",

@@ -6,16 +6,9 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker: 
-    - image: circleci/node:6
+    - image: cimg/node:6
 jobs:
   test:
-    <<: *defaults
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     steps:
       - checkout
 
@@ -63,9 +56,9 @@ jobs:
       - run: 
           name: Publish to dockerhub
           command: |
-            docker build -t cppchriscpp/cruddie-mock:$CIRCLE_TAG .
+            docker build -t igwgames/cruddie-mock:$CIRCLE_TAG .
             docker login -u $DOCKER_USER -p $DOCKER_PASS
-            docker push cppchriscpp/cruddie-mock:$CIRCLE_TAG
+            docker push igwgames/cruddie-mock:$CIRCLE_TAG
 
 
 workflows:
